@@ -9,15 +9,30 @@
     &__photo {        
         border-radius: 50%;         
         box-shadow: 0rem 5px 1rem var(--color-black);
+
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;        
     }
-    
-    h3 {                                 
+        
+    &__location {                                 
         color: var(--color-gray-dark);        
         transform: skewX(-20deg);
+
+        animation-name: moveInRightSkewed;
+        animation-duration: 1s;
+        animation-timing-function: ease-in; 
     }
 
-    h2,
-    h3 {
+    &__role,
+    &__location {
         font-size: 2.4rem;
+    }
+
+    &__name,
+    &__role {
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in; 
     }
 }
