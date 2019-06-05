@@ -1,9 +1,10 @@
 .navigation {    
-    border-bottom: 2px solid var(--color-gray); 
+    @include borderBottom();
 
     &__nav {
         display: flex;
         justify-content: space-between;
+        font-weight: bold;
 
         :first-child {
             padding-left: 1rem;
