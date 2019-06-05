@@ -1,8 +1,12 @@
 :root {
     --color-primary-light: #f5f8fa;
     --color-primary-dark: #51addd;
+
     --color-black: #3a4145;
-    --color-gray:#d6d9db;
+
+    --color-gray-light:#d6d9db;
+    --color-gray-dark:#aaaabb;
+
     --color-white: #fff;    
 }
 
@@ -23,9 +27,5 @@ html {
 }
 
 body {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.6;
     min-height: 100vh;    
 }
