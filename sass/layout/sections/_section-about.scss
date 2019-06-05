@@ -1,0 +1,71 @@
+.section-about {        
+    display: flex;
+    justify-content: center;
+
+    .aboutMe {
+        width: 30%;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: justify;
+        margin-right: 4rem;
+    }
+
+    .contacts {
+        
+        &__list {
+            list-style: none;            
+        }
+
+        &__item {
+            padding: .7rem 0rem;
+            display: flex;
+            align-items: center;        
+        }
+
+        &__icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            margin-right: .5rem;
+            order: -1;
+        }
+
+        &__link {
+            text-decoration: none;
+            text-transform: none; 
+            transition: all .2s;
+            
+            &-github:hover,
+            &-github:focus {                
+                color: purple; 
+                @include borderBottom(purple);                
+                transform: scale(1.05);                            
+            }
+
+            &-github:hover + .contacts__icon,
+            &-github:focus + .contacts__icon {
+                fill: purple;
+                transform: scale(1.05);
+            }
+
+            &-facebook:hover,
+            &-facebook:focus {                
+                color: var(--color-blue); 
+                @include borderBottom(var(--color-blue));                
+                transform: scale(1.05);                            
+            }
+
+            &-facebook:hover + .contacts__icon,
+            &-facebook:focus + .contacts__icon {
+                fill: var(--color-blue);
+                transform: scale(1.05);
+            }
+        }
+
+        &__link, 
+        &__email {
+            color: var(--color-black);
+            font-weight: 500;            
+            font-size: 2rem;
+        }
+    }
+}
