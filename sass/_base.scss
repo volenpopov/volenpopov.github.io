@@ -1,0 +1,30 @@
+:root {
+    --color-primary-light: #f5f8fa;
+    --color-primary-dark: #51addd;
+    --color-black: #3a4145;
+    --color-gray:#d6d9db;
+    --color-white: #fff;    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; 
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //so that 1rem = 10px
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;    
+}
