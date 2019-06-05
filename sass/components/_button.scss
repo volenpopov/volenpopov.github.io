@@ -1,0 +1,20 @@
+.btn {
+    padding: 1rem 2rem;
+    text-transform: uppercase;    
+    
+    &__nav {
+        transition: all .3s;
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            background-color: var(--color-primary-light);                                      
+            letter-spacing: .8px;
+            outline: none;
+        }
+
+        &:active {
+            letter-spacing: 0;                
+        }
+    }    
+}
