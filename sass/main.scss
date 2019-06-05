@@ -7,8 +7,11 @@
 @import "typography";
 
 @import "base";
-@import "navigation";
-@import "header";
+
+@import "layout/sections/section-about";
+@import "layout/header";
+@import "layout/navigation";
+
 
 @import "components/button"; 
 
