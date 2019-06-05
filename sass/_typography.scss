@@ -5,3 +5,13 @@ body {
     line-height: 1.6;
     color: var(--color-black);
 }
+
+a,
+p {
+    outline: none;
+}
+
+.heading-section {
+    margin-bottom: 1rem;
+    font-size: 2.3rem;  
+}
