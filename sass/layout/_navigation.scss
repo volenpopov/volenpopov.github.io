@@ -1,0 +1,31 @@
+.navigation {    
+    @include borderBottom(var(--color-gray-light));
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+
+        :first-child {
+            padding-left: 1rem;
+        }
+    }
+
+    &__rightSide {
+        display: flex;
+        justify-content: center;
+
+        :first-child {
+            padding-left: 2rem;
+        }
+
+        :last-child {
+            padding-right: 1rem;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;                
+    }
+}
