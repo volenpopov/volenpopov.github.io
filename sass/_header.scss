@@ -1,0 +1,23 @@
+.header {
+    @include borderBottom;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-primary-light);        
+
+    &__photo {        
+        border-radius: 50%;         
+        box-shadow: 0rem 5px 1rem var(--color-black);
+    }
+    
+    h3 {                                 
+        color: var(--color-gray-dark);        
+        transform: skewX(-20deg);
+    }
+
+    h2,
+    h3 {
+        font-size: 2.4rem;
+    }
+}
