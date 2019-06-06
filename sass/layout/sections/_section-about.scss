@@ -1,6 +1,10 @@
-.section-about {        
+.section-about {    
+    @include applyAnimation(moveInBottom);
+    
     display: flex;
-    justify-content: center;
+    justify-content: center; 
+    flex-grow: 1;   
+    padding: 1.5rem 0;
 
     .aboutMe {
         width: 30%;
@@ -11,7 +15,7 @@
     }
 
     .contacts {
-        
+                
         &__list {
             list-style: none;            
         }
@@ -35,9 +39,9 @@
             transition: all .2s;
             
             &-github:hover,
-            &-github:focus {                
-                color: purple; 
-                @include borderBottom(purple);                
+            &-github:focus {   
+                @include applyBorder("bottom", purple);                
+                color: purple;                              
                 transform: scale(1.05);                            
             }
 
@@ -47,10 +51,14 @@
                 transform: scale(1.05);
             }
 
+            &-github:active {
+                transform: scale(1);
+            }
+
             &-facebook:hover,
-            &-facebook:focus {                
-                color: var(--color-blue); 
-                @include borderBottom(var(--color-blue));                
+            &-facebook:focus {            
+                @include applyBorder("bottom", var(--color-blue));    
+                color: var(--color-blue);                              
                 transform: scale(1.05);                            
             }
 
@@ -59,6 +67,10 @@
                 fill: var(--color-blue);
                 transform: scale(1.05);
             }
+
+            &-facebook:active {
+                transform: scale(1);
+            }
         }
 
         &__link, 
@@ -66,6 +78,10 @@
             color: var(--color-black);
             font-weight: 500;            
             font-size: 2rem;
+        }
+
+        &__email:hover {
+            @include applyBorder("bottom", var(--color-black));
         }
     }
 }
