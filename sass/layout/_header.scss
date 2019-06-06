@@ -1,5 +1,6 @@
 .header {
     @include applyBorder("bottom", var(--color-gray-light));
+    backface-visibility: hidden;
 
     display: flex;
     flex-direction: column;
