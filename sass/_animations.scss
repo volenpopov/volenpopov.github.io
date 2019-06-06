@@ -4,10 +4,6 @@
         transform: translate(-10rem);
     }
 
-    80% {
-        transform: translate(.3rem);
-    }
-
     100% {
         opacity: 1;
         transform: translate(0);
@@ -18,10 +14,6 @@
     0% {
         opacity: 0;
         transform: translate(10rem);
-    }
-
-    80% {
-        transform: translate(-.3rem);
     }
 
     100% {
@@ -36,10 +28,6 @@
         transform: translate(10rem) skewX(-20deg);
     }
 
-    80% {
-        transform: translate(-.3rem) skewX(-20deg);
-    }
-
     100% {
         opacity: 1;
         transform: translate(0) skewX(-20deg);
@@ -49,7 +37,7 @@
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(3rem);
+        transform: translateY(5rem);
     }
 
     100% {
