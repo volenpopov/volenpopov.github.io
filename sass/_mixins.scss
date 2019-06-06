@@ -15,6 +15,6 @@
 
 @mixin applyAnimation($name) {
     animation-name: $name;
-    animation-duration: 1s;    
+    animation-duration: .8s;    
     animation-timing-function: ease-in;
 }
