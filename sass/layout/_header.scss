@@ -13,6 +13,18 @@
         border: 3px solid var(--color-black);
         box-shadow: 0rem 5px 1rem var(--color-black);        
     }
+    
+    &__photo-wrapper {
+        position: relative;
+    }
+    
+    &__photo-wrapper:after {
+        content: '';
+        display: block;  
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        z-index: 1;
+    }
         
     &__location {                
         @include applyAnimation(moveInRightSkewed);
