@@ -85,7 +85,7 @@
 
         <section class="section-certificates">
             <div class="section-certificates__content-softuni">                    
-                <a href="https://softuni.bg" class="heading-section">Software University</a>                    
+                <h4 class="heading-section">Software University</h4>                    
                 <ul>
                     <li><a href="https://softuni.bg/Certificates/Details/64763/f16fe688" target="_blank" tabindex="0" class="section-certificates__content-softuni__link">Databases Advanced - Entity Framework - February 2019</a></li>
                     <li><a href="https://softuni.bg/Certificates/Details/64916/dd98a8ea" target="_blank" tabindex="0" class="section-certificates__content-softuni__link">C# OOP - February 2019</a></li>
@@ -98,7 +98,7 @@
             </div>               
                                 
             <div class="section-certificates__content-udemy">                
-                <a href="https://www.udemy.com" target="_blank" tabindex="0" class="heading-section">Udemy</a>                            
+                <h4 class="heading-section">Udemy</h4>                            
                 <ul>
                     <li><a href="https://www.udemy.com/certificate/UC-OYLG5F7C/?utm_campaign=email&utm_source=sendgrid.com&utm_medium=email" target="_blank" tabindex="0" class="section-certificates__content-udemy__link">Advanced JavaScript Concepts</a></li>
                 </ul>                
@@ -109,6 +109,39 @@
     <footer class="footer">
         <p class="footer__text">&copy; 2019 Volen Popov</p>
     </footer>
+    <script>
+        {
+            (function onStartUp() {
+                Array.from(document.querySelector(".navigation__rightSide").children)
+                    .forEach(btn => btn.addEventListener("click", displaySection));
+
+                const sections = {
+                "About me": document.querySelector(".section-about"),                
+                "Certificates": document.querySelector(".section-certificates"),
+                "Projects": document.querySelector(".section-projects"),
+                };
+                sections["About me"].style.display = "flex";
+                sections["Certificates"].style.display = "none";
+                sections["Projects"].style.display = "none";
+            
+                function displaySection() {                    
+                    const targetSectionName = this.textContent;
+                    const targetSection = sections[targetSectionName];  
+                    const activeSectionName = Object.keys(sections)
+                            .find(sectionName => 
+                                    sections[sectionName].style.display === "flex");                                         
+                    const activeSection = sections[activeSectionName];
+
+                    if (targetSection !== activeSection) {
+                        activeSection.style.display = "none";
+                        targetSection.style.display = "flex";
+                    } 
+                    
+                    return true;
+                }
+            })();            
+        }
+    </script>
 </body>
 
 </html>
