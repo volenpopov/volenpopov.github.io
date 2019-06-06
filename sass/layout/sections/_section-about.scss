@@ -1,6 +1,5 @@
 .section-about {    
     @include sectionDefaultSettings;
-
     @include applyAnimation(moveInBottom);
     backface-visibility: hidden;
     
