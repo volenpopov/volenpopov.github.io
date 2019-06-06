@@ -1,14 +1,10 @@
 :root {
     --color-primary-light: #f5f8fa;
     --color-primary-dark: #51addd;
-
     --color-black: #3a4145;
-
     --color-gray-light:#d6d9db;
     --color-gray-dark:#aaaabb;
-
     --color-white: #fff;   
-    
     --color-blue: #3b5998;
 }
 
@@ -26,8 +22,4 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; //so that 1rem = 10px
-}
-
-body {
-    min-height: 100vh;    
 }
