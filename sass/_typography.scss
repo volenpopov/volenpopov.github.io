@@ -6,9 +6,15 @@ body {
     color: var(--color-black);
 }
 
+a {
+    color: inherit;
+    text-transform: none;
+    text-decoration: none;
+}
+
 a,
 p {
-    outline: none;
+    outline: none;    
 }
 
 .heading-section {
