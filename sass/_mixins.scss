@@ -1,3 +1,13 @@
-@mixin borderBottom($color) {
-    border-bottom: 2px solid $color; 
+@mixin applyBorder($position, $color) {
+    @if ($position == "top") {
+        border-top: 2px solid $color;
+    } @else if ($position == "bottom") {
+        border-bottom: 2px solid $color; 
+    }    
+}
+
+@mixin applyAnimation($name) {
+    animation-name: $name;
+    animation-duration: 1s;    
+    animation-timing-function: ease-in;
 }
