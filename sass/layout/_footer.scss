@@ -1,0 +1,12 @@
+.footer {
+    @include applyBorder("top", var(--color-gray-light));
+
+    &__text {        
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: .5rem 1rem;
+        transform: skewX(-30deg);
+        letter-spacing: 1px;        
+    }
+}
