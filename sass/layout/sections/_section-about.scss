@@ -1,11 +1,9 @@
 .section-about {    
-    @include applyAnimation(moveInBottom);
-    
-    display: flex;
-    justify-content: center; 
-    flex-grow: 1;   
-    padding: 1.5rem 0;
+    @include sectionDefaultSettings;
 
+    @include applyAnimation(moveInBottom);
+    backface-visibility: hidden;
+    
     .aboutMe {
         width: 30%;
         font-size: 2rem;
