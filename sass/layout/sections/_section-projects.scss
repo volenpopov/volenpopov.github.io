@@ -1,0 +1,12 @@
+.section-projects {
+    @include sectionDefaultSettings;
+    @include applyAnimation(moveInBottom);
+    backface-visibility: hidden;
+    
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-size: 3rem;
+    }
+}
