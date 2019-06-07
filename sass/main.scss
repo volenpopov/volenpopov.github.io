@@ -1,23 +1,20 @@
-@import "animations";
+@import "base/animations";
+@import "base/base";
+@import "base/mixins";
+@import "base/typography";
+@import "base/utilities";
 
-@import "mixins";
-
-@import "utilities";
-
-@import "base";
-
-@import "typography";
+@import "components/button";
 
 @import "layout/sections/section-about";
 @import "layout/sections/section-certificates"; 
 @import "layout/sections/section-projects";
+
+@import "layout/footer";
 @import "layout/header";
 @import "layout/navigation";
-@import "layout/footer";
 @import "layout/page-layout";
 
-
-@import "components/button";
 
 
 
