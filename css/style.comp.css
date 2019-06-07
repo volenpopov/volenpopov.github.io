@@ -30,21 +30,6 @@
     opacity: 1;
     transform: translate(0); } }
 
-.ht {
-  color: var(--color-primary-dark); }
-
-.u-margin-top-small-1 {
-  margin-top: 1.5rem; }
-
-.u-margin-top-small-2 {
-  margin-top: 2rem; }
-
-.u-margin-bottom-xs {
-  margin-bottom: 5px; }
-
-.u-margin-bottom-small {
-  margin-bottom: 1.5rem; }
-
 :root {
   --color-primary-light: #f5f8fa;
   --color-primary-dark: #51addd;
@@ -71,7 +56,7 @@ html {
 body {
   font-family: 'Oswald', sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.6;
   color: var(--color-black); }
 
@@ -88,12 +73,39 @@ p {
   margin-bottom: 1rem;
   font-size: 2.3rem; }
 
+.ht {
+  color: var(--color-primary-dark); }
+
+.u-margin-top-small-1 {
+  margin-top: 1.5rem; }
+
+.u-margin-top-small-2 {
+  margin-top: 2rem; }
+
+.u-margin-bottom-xs {
+  margin-bottom: 5px; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase; }
+  .btn__nav {
+    transition: all .3s; }
+    .btn__nav:hover, .btn__nav:focus {
+      cursor: pointer;
+      background-color: var(--color-primary-light);
+      letter-spacing: .8px; }
+    .btn__nav:active {
+      letter-spacing: 0; }
+
 .section-about {
   display: flex;
   justify-content: center;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding: 4rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   animation-name: moveInBottom;
   animation-duration: .8s;
   animation-timing-function: ease-in;
@@ -177,7 +189,7 @@ p {
   justify-content: center;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding: 4rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   animation-name: moveInBottom;
   animation-duration: .8s;
   animation-timing-function: ease-in;
@@ -206,7 +218,7 @@ p {
       margin-bottom: 1rem; }
     .section-certificates__content-softuni__link, .section-certificates__content-udemy__link {
       font-size: 1.8rem;
-      font-weight: 600; }
+      font-weight: 500; }
     .section-certificates__content-softuni__link:hover, .section-certificates__content-softuni__link:focus, .section-certificates__content-udemy__link:hover, .section-certificates__content-udemy__link:focus {
       color: var(--color-primary-dark); }
 
@@ -215,7 +227,7 @@ p {
   justify-content: center;
   flex-grow: 1;
   flex-wrap: wrap;
-  padding: 4rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   animation-name: moveInBottom;
   animation-duration: .8s;
   animation-timing-function: ease-in;
@@ -224,6 +236,17 @@ p {
   align-items: center; }
   .section-projects p {
     font-size: 3rem; }
+
+.footer {
+  border-top: 2px solid var(--color-gray-light); }
+  .footer__text {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: .5rem 1rem;
+    transform: skewX(-20deg);
+    letter-spacing: 1px;
+    backface-visibility: hidden; }
 
 .header {
   border-bottom: 2px solid var(--color-gray-light);
@@ -275,7 +298,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-weight: bold; }
+    font-weight: 700; }
     .navigation__nav :first-child {
       padding-left: 1rem; }
   .navigation__link:link, .navigation__link:visited {
@@ -293,7 +316,7 @@ p {
           display: flex;
           flex-direction: column;
           flex-grow: 1; }
-          .navigation__checkbox:checked + nav .navigation__rightSide-btns p {
+          .navigation__checkbox:checked + nav .navigation__rightSide-btns a {
             padding: .5rem 0 .5rem 1rem;
             border-top: 1px solid var(--color-black); } }
     .navigation__rightSide-btns :first-child {
@@ -345,17 +368,6 @@ p {
     top: 0;
     transform: rotate(-135deg); }
 
-.footer {
-  border-top: 2px solid var(--color-gray-light); }
-  .footer__text {
-    display: inline-block;
-    font-size: 1.3rem;
-    font-weight: 600;
-    padding: .5rem 1rem;
-    transform: skewX(-20deg);
-    letter-spacing: 1px;
-    backface-visibility: hidden; }
-
 body {
   display: flex;
   flex-direction: column;
@@ -363,15 +375,3 @@ body {
 
 main {
   flex: 1; }
-
-.btn {
-  padding: 1rem 2rem;
-  text-transform: uppercase; }
-  .btn__nav {
-    transition: all .3s; }
-    .btn__nav:hover, .btn__nav:focus {
-      cursor: pointer;
-      background-color: var(--color-primary-light);
-      letter-spacing: .8px; }
-    .btn__nav:active {
-      letter-spacing: 0; }
