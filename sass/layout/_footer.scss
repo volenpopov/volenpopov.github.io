@@ -8,5 +8,6 @@
         padding: .5rem 1rem;
         transform: skewX(-20deg);
         letter-spacing: 1px;        
+        backface-visibility: hidden;
     }
 }
