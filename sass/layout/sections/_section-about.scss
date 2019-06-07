@@ -75,16 +75,33 @@
                 transform: scale(1);
             }
 
+            &-linkedIn:hover,
+            &-linkedIn:focus {   
+                @include applyBorder("bottom", var(--color-blue-linkedIn));                
+                color: var(--color-blue-linkedIn);                              
+                transform: scale(1.05);                            
+            }
+
+            &-linkedIn:hover + .contacts__icon,
+            &-linkedIn:focus + .contacts__icon {
+                fill: var(--color-blue-linkedIn);
+                transform: scale(1.05);
+            }
+
+            &-linkedIn:active {
+                transform: scale(1);
+            }
+
             &-facebook:hover,
             &-facebook:focus {            
-                @include applyBorder("bottom", var(--color-blue));    
-                color: var(--color-blue);                              
+                @include applyBorder("bottom", var(--color-blue-facebook));    
+                color: var(--color-blue-facebook);                              
                 transform: scale(1.05);                            
             }
 
             &-facebook:hover + .contacts__icon,
             &-facebook:focus + .contacts__icon {
-                fill: var(--color-blue);
+                fill: var(--color-blue-facebook);
                 transform: scale(1.05);
             }
 
