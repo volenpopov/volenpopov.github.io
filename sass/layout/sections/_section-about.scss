@@ -10,14 +10,14 @@
         text-align: justify;
         margin-right: 4rem;
 
-        @media only screen and (max-width: 825px) {
+        @media only screen and (max-width: 840px) {
             flex-grow: 1;
             margin: 0 0 2rem 0;
         }
     }
 
     .contacts { 
-        @media only screen and (max-width: 825px) {
+        @media only screen and (max-width: 840px) {
             flex-grow: 1;
 
         }
@@ -25,11 +25,11 @@
         &__list {            
             list-style: none; 
             
-            @media only screen and (max-width: 825px) {
+            @media only screen and (max-width: 840px) {
                 display: flex;                
             }
             
-            @media only screen and (max-width: 520px) {
+            @media only screen and (max-width: 655px) {
                 flex-direction: column;
             }
         }
@@ -39,7 +39,7 @@
             display: flex;
             align-items: center;  
             
-            @media only screen and (max-width: 825px) {
+            @media only screen and (max-width: 840px) {
                 &:not(:last-child) {
                     margin-right: 1.5rem;
                 }              
