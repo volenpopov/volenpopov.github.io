@@ -2,41 +2,53 @@
     @include sectionDefaultSettings;
     @include applyAnimation(moveInBottom);
     backface-visibility: hidden;
+
+    @media only screen and (max-width: 730px) {
+        flex-direction: column;
+    }
+
+    &__content {
+
+        &-softuni {   
+            margin-right: 5rem;
+
+            @media only screen and (max-width: 730px) {
+                margin: 0 0 2rem 0;
+            }
+        } 
     
-    &__content-softuni {
-        margin-right: 8rem;             
-    }
+        &-softuni,
+        &-udemy {
+            display: flex;
+            flex-direction: column; 
 
-    &__content-softuni,
-    &__content-udemy {
-        display: flex;
-        flex-direction: column; 
-    }
+            @media only screen and (max-width: 730px) {
+                align-items: center;
+            }
 
-    .heading-section {
-        align-self: center;
-        margin-bottom: 1.8rem;
-        border-bottom: 3px solid var(--color-black);      
-    }
+            .heading-section {
+                align-self: center;
+                margin-bottom: 1.8rem;
+                border-bottom: 3px solid var(--color-black);      
+            } 
+
+            & ul {
+                list-style: none;
+            }
     
-    &__content-softuni,
-    &__content-udemy {
-        & ul {
-            list-style: none;
-        }
-
-        & li:not(:last-child) {
-            margin-bottom: 1rem;
+            & li:not(:last-child) {
+                margin-bottom: 1rem;
+            }                    
+            
+            &__link {
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+    
+            &__link:hover, 
+            &__link:focus {
+                color: var(--color-primary-dark);                  
+            } 
         }        
-        
-        &__link {
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
-        &__link:hover, 
-        &__link:focus {
-            color: var(--color-primary-dark);                  
-        }              
     }    
 }
