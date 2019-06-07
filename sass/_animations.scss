@@ -1,7 +1,7 @@
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translate(-10rem);
+        transform: translate(-8rem);
     }
 
     100% {
@@ -13,7 +13,7 @@
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translate(10rem);
+        transform: translate(8rem);
     }
 
     100% {
@@ -25,7 +25,7 @@
 @keyframes moveInRightSkewed {
     0% {
         opacity: 0;
-        transform: translate(10rem) skewX(-20deg);
+        transform: translate(8rem) skewX(-20deg);
     }
 
     100% {
@@ -37,7 +37,7 @@
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(5rem);
+        transform: translateY(3rem);
     }
 
     100% {
