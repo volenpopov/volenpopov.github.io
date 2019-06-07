@@ -15,9 +15,16 @@
 
 <body>
     <div class="navigation">
+        <input type="checkbox" name="nav-toggle" id="nav-toggle" class="navigation__checkbox">        
         <nav class="navigation__nav">
             <a href="https://volenpopov.github.io" class="navigation__link btn btn__nav">Volen Popov</a>
-            <div class="navigation__rightSide">
+            <div class="navigation__rightSide-menu">
+                <label for="nav-toggle" class="navigation__rightSide-menuLabel">
+                    <span class="navigation__rightSide-menuText">Menu</span>
+                    <span class="navigation__rightSide-menuIcon">&nbsp;</span>
+                </label>
+            </div>
+            <div class="navigation__rightSide-btns">
                 <p class="btn btn__nav" tabindex="0">About me</p>
                 <p class="btn btn__nav" tabindex="0">Projects</p>
                 <p class="btn btn__nav" tabindex="0">Certificates</p>
@@ -40,7 +47,7 @@
         <section class="section-about">
             <div class="aboutMe">
                 <h4 class="heading-section">About me</h4>
-                <p>Helloo! My name is Volen and I am a recent Software Engineering graduate with good knowledge in: 
+                <p>Hellooо! My name is Volen and I am a recent Software Engineering graduate with good knowledge in: 
                     <span class="ht">C#</span>, <span class="ht">JavaScript</span>, 
                     <span class="ht">OOP</span>, <span class="ht">Data Structures</span>, <span class="ht">Algorithms</span>, <span class="ht">Design Patterns</span>
                     and the following tech stack: 
@@ -74,7 +81,7 @@
                         <svg class="contacts__icon">
                             <use xlink:href="img/symbol-defs.svg#icon-mail"></use>
                         </svg>
-                        <p class="contacts__email">Email: <span class="ht">volenpopov@abv.bg</span></p>
+                        <p class="contacts__email">Email: <span class="ht">volenpopov@gmail.com</span></p>
                      </li>
                 </ul>                
             </div>
@@ -98,7 +105,6 @@
                     <li><a href="https://softuni.bg/Certificates/Details/53743/18f576a7" target="_blank" tabindex="0" class="section-certificates__content-softuni__link">Programming Basics with C# - March 2018</a></li>
                 </ul>
             </div>               
-                                
             <div class="section-certificates__content-udemy">                
                 <h4 class="heading-section">Udemy</h4>                            
                 <ul>
@@ -114,7 +120,7 @@
     <script>
         {
             (function onStartUp() {
-                Array.from(document.querySelector(".navigation__rightSide").children)
+                Array.from(document.querySelector(".navigation__rightSide-btns").children)
                     .forEach(btn => btn.addEventListener("click", displaySection));
 
                 const sections = {
