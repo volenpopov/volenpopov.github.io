@@ -1,9 +1,9 @@
 @mixin sectionDefaultSettings {
     display: flex;
     justify-content: center; 
-    flex-grow: 1;   
-    flex-wrap: wrap;    
+    flex: 1;    
     padding: 2.5rem 1.5rem;    
+    backface-visibility: hidden;        
 }
 
 @mixin applyBorder($position, $color) {

@@ -103,15 +103,19 @@ p {
 .section-about {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
-  flex-wrap: wrap;
+  flex: 1;
   padding: 2.5rem 1.5rem;
+  backface-visibility: hidden;
   animation-name: moveInBottom;
   animation-duration: .8s;
-  animation-timing-function: ease-in;
-  backface-visibility: hidden; }
+  animation-timing-function: ease-in; }
+  .section-about > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; }
   .section-about .aboutMe {
     width: 50rem;
+    height: 30rem;
     font-size: 2rem;
     font-weight: 500;
     text-align: justify;
@@ -119,84 +123,93 @@ p {
     @media only screen and (max-width: 865px) {
       .section-about .aboutMe {
         flex-grow: 1;
+        width: auto;
+        height: auto;
         margin: 0 0 2rem 0; } }
-  @media only screen and (max-width: 865px) {
-    .section-about .contacts {
-      flex-grow: 1; } }
-  .section-about .contacts__list {
-    list-style: none; }
+  .section-about .contacts {
+    height: 30rem; }
     @media only screen and (max-width: 865px) {
-      .section-about .contacts__list {
-        display: flex; } }
-    @media only screen and (max-width: 680px) {
-      .section-about .contacts__list {
-        flex-direction: column; } }
-  .section-about .contacts__item {
-    padding: .7rem 0rem;
-    display: flex;
-    align-items: center; }
-    @media only screen and (max-width: 865px) {
-      .section-about .contacts__item:not(:last-child) {
-        margin-right: 1.5rem; } }
-  .section-about .contacts__icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    margin-right: .5rem;
-    order: -1; }
-  .section-about .contacts__link {
-    text-decoration: none;
-    text-transform: none;
-    transition: all .2s; }
-    .section-about .contacts__link-github:hover, .section-about .contacts__link-github:focus {
-      border-bottom: 2px solid purple;
-      color: purple;
-      transform: scale(1.05); }
-    .section-about .contacts__link-github:hover + .contacts__icon,
-    .section-about .contacts__link-github:focus + .contacts__icon {
-      fill: purple;
-      transform: scale(1.05); }
-    .section-about .contacts__link-github:active {
-      transform: scale(1); }
-    .section-about .contacts__link-linkedIn:hover, .section-about .contacts__link-linkedIn:focus {
-      border-bottom: 2px solid var(--color-blue-linkedIn);
-      color: var(--color-blue-linkedIn);
-      transform: scale(1.05); }
-    .section-about .contacts__link-linkedIn:hover + .contacts__icon,
-    .section-about .contacts__link-linkedIn:focus + .contacts__icon {
-      fill: var(--color-blue-linkedIn);
-      transform: scale(1.05); }
-    .section-about .contacts__link-linkedIn:active {
-      transform: scale(1); }
-    .section-about .contacts__link-facebook:hover, .section-about .contacts__link-facebook:focus {
-      border-bottom: 2px solid var(--color-blue-facebook);
-      color: var(--color-blue-facebook);
-      transform: scale(1.05); }
-    .section-about .contacts__link-facebook:hover + .contacts__icon,
-    .section-about .contacts__link-facebook:focus + .contacts__icon {
-      fill: var(--color-blue-facebook);
-      transform: scale(1.05); }
-    .section-about .contacts__link-facebook:active {
-      transform: scale(1); }
-  .section-about .contacts__link, .section-about .contacts__email {
-    color: var(--color-black);
-    font-weight: 500;
-    font-size: 2rem; }
-  .section-about .contacts__email:hover {
-    border-bottom: 2px solid var(--color-black); }
+      .section-about .contacts {
+        flex: 1;
+        height: auto; } }
+    .section-about .contacts__list {
+      list-style: none; }
+      @media only screen and (max-width: 865px) {
+        .section-about .contacts__list {
+          display: flex; } }
+      @media only screen and (max-width: 680px) {
+        .section-about .contacts__list {
+          flex-direction: column; } }
+    .section-about .contacts__item {
+      padding: .7rem 0rem;
+      display: flex;
+      align-items: center; }
+      @media only screen and (max-width: 865px) {
+        .section-about .contacts__item:not(:last-child) {
+          margin-right: 1.5rem; } }
+    .section-about .contacts__icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-right: .5rem;
+      order: -1; }
+    .section-about .contacts__link {
+      text-decoration: none;
+      text-transform: none;
+      transition: all .2s; }
+      .section-about .contacts__link-github:hover, .section-about .contacts__link-github:focus {
+        border-bottom: 2px solid purple;
+        color: purple;
+        transform: scale(1.05); }
+      .section-about .contacts__link-github:hover + .contacts__icon,
+      .section-about .contacts__link-github:focus + .contacts__icon {
+        fill: purple;
+        transform: scale(1.05); }
+      .section-about .contacts__link-github:active {
+        transform: scale(1); }
+      .section-about .contacts__link-linkedIn:hover, .section-about .contacts__link-linkedIn:focus {
+        border-bottom: 2px solid var(--color-blue-linkedIn);
+        color: var(--color-blue-linkedIn);
+        transform: scale(1.05); }
+      .section-about .contacts__link-linkedIn:hover + .contacts__icon,
+      .section-about .contacts__link-linkedIn:focus + .contacts__icon {
+        fill: var(--color-blue-linkedIn);
+        transform: scale(1.05); }
+      .section-about .contacts__link-linkedIn:active {
+        transform: scale(1); }
+      .section-about .contacts__link-facebook:hover, .section-about .contacts__link-facebook:focus {
+        border-bottom: 2px solid var(--color-blue-facebook);
+        color: var(--color-blue-facebook);
+        transform: scale(1.05); }
+      .section-about .contacts__link-facebook:hover + .contacts__icon,
+      .section-about .contacts__link-facebook:focus + .contacts__icon {
+        fill: var(--color-blue-facebook);
+        transform: scale(1.05); }
+      .section-about .contacts__link-facebook:active {
+        transform: scale(1); }
+    .section-about .contacts__link, .section-about .contacts__email {
+      color: var(--color-black);
+      font-weight: 500;
+      font-size: 2rem; }
+    .section-about .contacts__email:hover {
+      border-bottom: 2px solid var(--color-black); }
 
 .section-certificates {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
-  flex-wrap: wrap;
+  flex: 1;
   padding: 2.5rem 1.5rem;
+  backface-visibility: hidden;
   animation-name: moveInBottom;
   animation-duration: .8s;
   animation-timing-function: ease-in;
   backface-visibility: hidden; }
-  @media only screen and (max-width: 730px) {
-    .section-certificates {
-      flex-direction: column; } }
+  .section-certificates > div {
+    display: flex;
+    align-items: center; }
+    @media only screen and (max-width: 730px) {
+      .section-certificates > div {
+        flex-direction: column;
+        justify-content: center; } }
   .section-certificates__content-softuni {
     margin-right: 5rem; }
     @media only screen and (max-width: 730px) {
@@ -204,10 +217,12 @@ p {
         margin: 0 0 2rem 0; } }
   .section-certificates__content-softuni, .section-certificates__content-udemy {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    height: 31rem; }
     @media only screen and (max-width: 730px) {
       .section-certificates__content-softuni, .section-certificates__content-udemy {
-        align-items: center; } }
+        align-items: center;
+        height: auto; } }
     .section-certificates__content-softuni .heading-section, .section-certificates__content-udemy .heading-section {
       align-self: center;
       margin-bottom: 1.8rem;
@@ -225,9 +240,9 @@ p {
 .section-projects {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
-  flex-wrap: wrap;
+  flex: 1;
   padding: 2.5rem 1.5rem;
+  backface-visibility: hidden;
   animation-name: moveInBottom;
   animation-duration: .8s;
   animation-timing-function: ease-in;
@@ -374,4 +389,6 @@ body {
   min-height: 100vh; }
 
 main {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  justify-content: center; }

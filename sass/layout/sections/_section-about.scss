@@ -1,10 +1,16 @@
-.section-about {    
+.section-about {        
     @include sectionDefaultSettings;
     @include applyAnimation(moveInBottom);
-    backface-visibility: hidden;
-        
+      
+    & > div {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
     .aboutMe {         
-        width: 50rem;        
+        width: 50rem;  
+        height: 30rem;      
         font-size: 2rem;
         font-weight: 500;
         text-align: justify;
@@ -12,14 +18,18 @@
 
         @media only screen and (max-width: 865px) {
             flex-grow: 1;
+            width: auto;
+            height: auto;
             margin: 0 0 2rem 0;
         }
     }
 
     .contacts { 
-        @media only screen and (max-width: 865px) {
-            flex-grow: 1;
+        height: 30rem;
 
+        @media only screen and (max-width: 865px) {
+            flex: 1;
+            height: auto;
         }
 
         &__list {            
@@ -29,7 +39,7 @@
                 display: flex;                
             }
             
-            @media only screen and (max-width: 680px) {
+            @media only screen and (max-width: 680px) {                
                 flex-direction: column;
             }
         }
