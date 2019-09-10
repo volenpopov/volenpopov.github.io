@@ -326,12 +326,12 @@ p {
       right: 0;
       z-index: -1; }
     .section-projects .projects-container .project-block-website::after {
-      background: url("../../../img/bullsAndCowsBackground.JPG");
+      background: url("../../../img/personalWebsiteBackground.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat; }
     .section-projects .projects-container .project-block-restaurant::after {
-      background: url("../../../img/bullsAndCowsBackground.JPG");
+      background: url("../../../img/gourmeJunkBackground.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat; }
